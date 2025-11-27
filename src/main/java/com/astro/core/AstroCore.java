@@ -1,10 +1,5 @@
 package com.astro.core;
 
-import com.astro.core.common.data.AstroItems;
-import com.astro.core.common.data.block.AstroBlocks;
-import com.astro.core.datagen.AstroDatagen;
-import com.astro.core.common.data.materials.AstroMaterialFlags;
-import com.astro.core.common.data.configs.AstroConfigs;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -13,9 +8,8 @@ import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.api.sound.SoundEntry;
-
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
-import com.tterrag.registrate.util.entry.RegistryEntry;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,6 +20,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import com.astro.core.common.data.AstroItems;
+import com.astro.core.common.data.block.AstroBlocks;
+import com.astro.core.common.data.configs.AstroConfigs;
+import com.astro.core.common.data.materials.AstroMaterialFlags;
+import com.astro.core.datagen.AstroDatagen;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,7 +46,7 @@ public class AstroCore {
                                     REGISTRATE))
                             .title(REGISTRATE.addLang("itemGroup", AstroCore.id("creative_tab"),
                                     "AstroGreg"))
-//                            .icon(Class.ITEM_NAME::asStack)
+                            // .icon(Class.ITEM_NAME::asStack)
                             .build())
             .register();
 

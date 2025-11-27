@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 import net.minecraft.data.recipes.FinishedRecipe;
+
 import com.astro.core.common.data.AstroMachineRecipes;
 import com.astro.core.common.data.materials.AstroElements;
 
@@ -30,8 +31,7 @@ public class AstroGregGTAddon implements IGTAddon {
     }
 
     @Override
-    public void registerTagPrefixes() {
-    }
+    public void registerTagPrefixes() {}
 
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {

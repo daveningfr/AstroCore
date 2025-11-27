@@ -3,8 +3,10 @@ package com.astro.core.common.data;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.item.ComponentItem;
 import com.gregtechceu.gtceu.api.item.component.ElectricStats;
-import com.tterrag.registrate.util.entry.ItemEntry;
+
 import net.minecraft.world.item.Item;
+
+import com.tterrag.registrate.util.entry.ItemEntry;
 
 import static com.astro.core.AstroCore.ASTRO_CREATIVE_TAB;
 import static com.gregtechceu.gtceu.common.registry.GTRegistration.REGISTRATE;

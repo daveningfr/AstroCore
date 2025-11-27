@@ -8,7 +8,7 @@ license = "${mod_license}"
 # A list of mods - how many allowed here is determined by the individual mod loader
 
 [[mods]]
-    modId = "${mod_id}"
+    modId = "astrogreg"
     version = "${version}"
     displayName = "AstroCore"
     displayURL = "${mod_url}"
@@ -20,19 +20,19 @@ license = "${mod_license}"
     authors="${mod_author}"
     description = '''This is the Core mod for AstroGreg:Exsilium'''
 
-    [[dependencies.${mod_id}]]
+    [[dependencies.astrogreg]]
         modId = "forge"
         mandatory = true
         versionRange = "[${forge_version},)"
         ordering = "NONE"
         side = "BOTH"
-    [[dependencies.${mod_id}]]]
+    [[dependencies.astrogreg]]]
         modId = "minecraft"
         mandatory = true
         versionRange = "[${minecraft_version},)"
         ordering = "NONE"
         side = "BOTH"
-    [[dependencies.${mod_id}]]]
+    [[dependencies.astrogreg]]]
         modId = "gtceu"
         mandatory = true
         versionRange = "[${gtceu_version},)"

@@ -4,6 +4,7 @@ import com.gregtechceu.gtceu.api.data.chemical.Element;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 
 public class AstroElements {
+
     public static final Element APNS = createAndRegister(-1, -1, -1, null, "mystery", "✨", false);
 
     public static Element createAndRegister(long protons, long neutrons, long halfLifeSeconds, String decayTo,

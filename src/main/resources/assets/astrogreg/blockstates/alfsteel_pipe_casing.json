@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "astrogreg:generators/machine_casing_pipe_alfsteel"
+    }
+  }
+}

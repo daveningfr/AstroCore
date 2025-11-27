@@ -1,4 +1,3 @@
 package com.astro.core.common.data;
 
-public class AstroMaterialRegistry {
-}
+public class AstroMaterialRegistry {}

@@ -1,6 +1,8 @@
 package com.astro.core;
 
+import com.astro.core.common.data.AstroRecipeTypes;
 import com.astro.core.common.data.block.AstroBlocks;
+import com.astro.core.common.machine.multiblock.generator.AetherEngine;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -27,6 +29,8 @@ public class AstroGregGTAddon implements IGTAddon {
     @Override
     public void initializeAddon() {
         AstroBlocks.init();
+        AstroRecipeTypes.init();
+        AetherEngine.init();
     }
 
     @Override

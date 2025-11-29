@@ -22,5 +22,25 @@ public class AstroConfigs {
     @Configurable
     public FeatureConfigs features = new FeatureConfigs();
 
-    public static class FeatureConfigs {}
+    public static class FeatureConfigs {
+
+        @Configurable
+        @Configurable.Comment({ "The max temperature of the Large Manasteel Mana Boiler" })
+        public int manasteelBoilerMaxTemperature = 2000;
+        @Configurable
+        @Configurable.Comment({ "The heat speed of the Large Manasteel Mana Boiler" })
+        public int manasteelBoilerHeatSpeed = 1;
+        @Configurable
+        @Configurable.Comment({ "The max temperature of the Large Terrasteel Mana Boiler" })
+        public int terrasteelBoilerMaxTemperature = 2000;
+        @Configurable
+        @Configurable.Comment({ "The heat speed of the Large Terrasteel Mana Boiler" })
+        public int terrasteelBoilerHeatSpeed = 1;
+        @Configurable
+        @Configurable.Comment({ "The max temperature of the Large Alfsteel Mana Boiler" })
+        public int alfsteelBoilerMaxTemperature = 2000;
+        @Configurable
+        @Configurable.Comment({ "The heat speed of the Large Alfsteel Mana Boiler" })
+        public int alfsteelBoilerHeatSpeed = 1;
+    }
 }

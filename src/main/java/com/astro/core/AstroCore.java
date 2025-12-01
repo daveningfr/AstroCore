@@ -129,7 +129,8 @@ public class AstroCore {
      */
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         if (AstroConfigs.INSTANCE == null) {
-            AstroConfigs.init();}
+            AstroConfigs.init();
+        }
         ManaBoilers.init();
         AetherEngine.init();
     }

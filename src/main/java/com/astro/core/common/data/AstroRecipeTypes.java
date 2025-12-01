@@ -26,7 +26,7 @@ public class AstroRecipeTypes {
                 .setEUIO(IO.OUT);
 
         MANA_BOILER_RECIPES = register("mana_boiler", MULTIBLOCK)
-                .setMaxIOSize(1, 0, 1, 0)
+                .setMaxIOSize(1, 0, 1, 1)
                 .setProgressBar(AstroGuiTextures.PROGRESS_BAR_BOILER_FUEL_MANA, DOWN_TO_UP)
                 .setMaxTooltips(1)
                 .setSound(GTSoundEntries.FURNACE);

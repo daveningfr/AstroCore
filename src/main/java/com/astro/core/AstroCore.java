@@ -1,5 +1,6 @@
 package com.astro.core;
 
+import com.astro.core.common.data.materials.AstroMaterials;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -107,7 +108,8 @@ public class AstroCore {
      * @param event
      */
     private void addMaterials(MaterialEvent event) {
-        // CustomMaterials.init();
+        AstroMaterials.register();
+        AstroMaterials.init();
     }
 
     /**

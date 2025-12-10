@@ -16,7 +16,7 @@ it from our team for consideration.
 Written by the collective AstroGreg Team. This mod currently contains examples from [Screcret](https://github.com/screret)
 and [JuiceyBean](https://github.com/JuiceyBeans)'s [GT Addon Template](https://github.com/GregTechCEu/GregTech-Addon-Template?tab=readme-ov-file).
 
-Mod would not be possible without heavily referencing [PhoenixVine](https://github.com/Phoenixvine32908)'s [PhoenixCore](https://github.com/Phoenixvine32908/PhoenixCore/).
+Mod would not be possible without heavily referencing [PhoenixVine](https://github.com/Phoenixvine32908)'s [PhoenixCore](https://github.com/Phoenixvine32908/PhoenixCore/) for  file structure.
 
 If you are looking for our mod pack, we have a separate repository for that on [this page](https://github.com/HazeVista/AstroGregExsilium).
 

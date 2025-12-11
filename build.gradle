@@ -88,6 +88,13 @@ repositories {
     maven {
         url = "https://maven.architectury.dev"
     }
+    maven {
+        name = 'GuideME Snapshots'
+        url = 'https://central.sonatype.com/repository/maven-snapshots/'
+        content {
+            includeModule('org.appliedenergistics', 'guideme')
+        }
+    }
 }
 
 version = mod_version
@@ -191,13 +198,13 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-    //AE2
-    modImplementation("curse.maven:Applied_energesitics-223794:${ae_version}")
-    modImplementation("curse.maven:gudieme-1173950:${guide_version}")
+    //AE2 and dependencies
+    modImplementation("org.appliedenergistics:appliedenergistics2-forge-${ae_version}")
+    modImplementation("org.appliedenergistics:guideme-${guide_version}")
 
-    //Powah!
-    modImplementation("curse.maven:Powah-633483:${powah_version}")
-    modImplementation("curse.maven:ClothAPI-348521:${cloth_version}")
+    //Powah and dependencies
+    modImplementation("owmii.powah:Powah-${powah_version}")
+    modImplementation("me.shedaniel:cloth-config-${cloth_version}-forge")
 
 }
 

@@ -24,6 +24,7 @@ import com.astro.core.common.data.AstroItems;
 import com.astro.core.common.data.AstroRecipeTypes;
 import com.astro.core.common.data.block.AstroBlocks;
 import com.astro.core.common.data.configs.AstroConfigs;
+import com.astro.core.common.data.materials.AstroMaterialFlagAddition;
 import com.astro.core.common.data.materials.AstroMaterialFlags;
 import com.astro.core.common.data.materials.AstroMaterials;
 import com.astro.core.common.machine.multiblock.generator.AetherEngine;
@@ -118,7 +119,7 @@ public class AstroCore {
      * @param event
      */
     private void modifyMaterials(PostMaterialEvent event) {
-        // CustomMaterials.modify();
+        AstroMaterialFlagAddition.register();
     }
 
     private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {

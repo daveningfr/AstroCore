@@ -18,12 +18,5 @@ import static com.gregtechceu.gtceu.data.recipe.GTCraftingComponents.*;
 
 public class AstroMachineRecipes {
 
-    public static void init(Consumer<FinishedRecipe> provider) {
-        // AstroRecipeTypes.AETHER_ENGINE_RECIPES.recipeBuilder("burn_aether")
-        // .inputFluids(AETHER.getFluid(16))
-        // .duration(50)
-        // .EUt(-1536)
-        // .outputFluids(DEPLETED_AETHER.getFluid(1))
-        // .save(provider);
-    }
+    public static void init(Consumer<FinishedRecipe> provider) {}
 }

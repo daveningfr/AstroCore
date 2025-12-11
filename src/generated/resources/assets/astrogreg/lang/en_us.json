@@ -17,10 +17,13 @@
   "material.astrogreg.calorite": "Calorite",
   "material.astrogreg.desh": "Desh",
   "material.astrogreg.electrolyte": "Electrolyte",
+  "material.astrogreg.energized_steel": "Energized Steel",
   "material.astrogreg.etrium": "Etrium",
+  "material.astrogreg.futura_alloy": "Futura Steel",
   "material.astrogreg.jovite": "Jovite",
   "material.astrogreg.juperium": "Juperium",
   "material.astrogreg.kronalium": "Kronalium",
   "material.astrogreg.ostrum": "Ostrum",
-  "material.astrogreg.saturlyte": "Saturlyte"
+  "material.astrogreg.saturlyte": "Saturlyte",
+  "material.astrogreg.sky_stone": "Sky Stone"
 }

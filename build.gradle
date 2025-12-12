@@ -199,8 +199,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
     //AE2 and dependencies
-    modImplementation("org.appliedenergistics:appliedenergistics2-forge:${ae_version}")
-    modImplementation("org.appliedenergistics:guideme:${guide_version}")
+    modImplementation("org.appliedenergistics:appliedenergistics2-forge-${ae_version}")
+    modImplementation("org.appliedenergistics:guideme-${guide_version}")
 
     //Powah and dependencies
     modImplementation("owmii.powah:Powah:${powah_version}")

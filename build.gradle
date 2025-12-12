@@ -203,8 +203,8 @@ dependencies {
     modImplementation("org.appliedenergistics:guideme-${guide_version}")
 
     //Powah and dependencies
-    modImplementation("owmii.powah:Powah:${powah_version}")
-    modImplementation("me.shedaniel.cloth:cloth-config-forge:${cloth_version}")
+    modImplementation("owmii.powah:Powah-${powah_version}")
+    modImplementation("me.shedaniel:cloth-config-${cloth_version}-forge")
 
     //Botania,addons and dependencies
     modImplementation("vazkii.botania:Botania:${minecraft_version}-${botania_version}-FORGE")

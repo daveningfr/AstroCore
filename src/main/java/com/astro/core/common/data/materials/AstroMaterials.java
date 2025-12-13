@@ -1,10 +1,13 @@
 package com.astro.core.common.data.materials;
 
+import com.astro.core.common.GTVoltage;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+
+
 
 import appeng.core.definitions.AEItems;
 import com.astro.core.AstroCore;
@@ -194,7 +197,7 @@ public class AstroMaterials {
                     .dust()
                     .ingot()
                     .fluid()
-                    .blastTemp(1700, BlastProperty.GasTier.LOW, 120, 800)
+                    .blastTemp(1700, BlastProperty.GasTier.LOW, (int)GTVoltage.VA.MV, 800)
                     .flags(MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_DENSE,
                            MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_ROD, MaterialFlags.MORTAR_GRINDABLE)
                     .color(0x159e1e).secondaryColor(0x000000).iconSet(MaterialIconSet.SHINY)
@@ -207,7 +210,7 @@ public class AstroMaterials {
                 .dust()
                 .ingot()
                 .fluid()
-                .blastTemp(3500, BlastProperty.GasTier.MID, 120, 1600)
+                .blastTemp(3500, BlastProperty.GasTier.MID, (int)GTVoltage.VA.IV, 1600)
                 .flags(MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_DENSE,
                         MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_ROD, MaterialFlags.MORTAR_GRINDABLE)
                 .color(0xed64d4).secondaryColor(0x000000).iconSet(MaterialIconSet.SHINY)
@@ -220,7 +223,7 @@ public class AstroMaterials {
                 .dust()
                 .ingot()
                 .fluid()
-                .blastTemp(7100, BlastProperty.GasTier.HIGH, 120, 2400)
+                .blastTemp(7100, BlastProperty.GasTier.HIGH, (int)GTVoltage.VA.ZPM, 2400)
                 .flags(MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_DENSE,
                         MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_ROD, MaterialFlags.MORTAR_GRINDABLE)
                 .color(0x8c2929).secondaryColor(0x000000).iconSet(MaterialIconSet.SHINY)

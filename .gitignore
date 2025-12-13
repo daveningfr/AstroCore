@@ -1,6 +1,9 @@
 # run
 run/*
 
+#include run in src
+!src/main/java/com/astro/core/common/data/recipe/run/
+!src/main/java/com/astro/core/common/data/recipe/run/**
 # gradle
 
 .gradle/

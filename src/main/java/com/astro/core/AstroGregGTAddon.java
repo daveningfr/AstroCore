@@ -1,5 +1,6 @@
 package com.astro.core;
 
+import com.astro.core.common.machine.drums.AstroDrumRecipes;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
@@ -42,6 +43,7 @@ public class AstroGregGTAddon implements IGTAddon {
     public void addRecipes(Consumer<FinishedRecipe> provider) {
         AstroMachineRecipes.init(provider);
         AstroWireRecipeRunner.init(provider);
+        AstroDrumRecipes.init(provider);
     }
 
     @Override

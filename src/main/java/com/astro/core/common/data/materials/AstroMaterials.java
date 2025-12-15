@@ -183,7 +183,8 @@ public class AstroMaterials {
                 AstroCore.id("fluix"))
                 .langValue("Fluix")
                 .gem()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_LENS, MaterialFlags.CRYSTALLIZABLE)
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_LENS, MaterialFlags.CRYSTALLIZABLE,
+                        MaterialFlags.DISABLE_DECOMPOSITION)
                 .components(GTMaterials.CertusQuartz, 1, GTMaterials.Redstone, 1, GTMaterials.Obsidian, 1)
                 .formula("(SiO2)(Si(FeS2)5(CrAl2O3)Hg3)(MgFeSi2O4)")
                 .color(0xC090F7).secondaryColor(0x2A1E5A).iconSet(MaterialIconSet.CERTUS)
@@ -195,7 +196,7 @@ public class AstroMaterials {
                 .gem()
                 .components(AstroMaterials.FLUIX, 8, GTMaterials.EnderEye, 1)
                 .formula("((SiO2)(Si(FeS2)5(CrAl2O3)Hg3)(MgFeSi2O4))8((BeK4N5)(CS))")
-                .flags(MaterialFlags.CRYSTALLIZABLE)
+                .flags(MaterialFlags.CRYSTALLIZABLE, MaterialFlags.DISABLE_DECOMPOSITION)
                 .color(0x4E3C95).secondaryColor(0x181F3C).iconSet(MaterialIconSet.OPAL)
                 .buildAndRegister();
 

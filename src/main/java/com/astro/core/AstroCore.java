@@ -1,6 +1,7 @@
 package com.astro.core;
 
-import com.astro.core.common.data.AstroDrums;
+import com.astro.core.common.data.materials.AstroModifiedMaterials;
+import com.astro.core.common.machine.drums.AstroDrums;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
@@ -112,6 +113,7 @@ public class AstroCore {
     private void addMaterials(MaterialEvent event) {
         AstroMaterials.register();
         AstroMaterials.init();
+        AstroModifiedMaterials.init();
     }
 
     /**
@@ -140,6 +142,7 @@ public class AstroCore {
         ManaBoilers.init();
         AetherEngine.init();
         AstroDrums.init();
+
     }
 
     /**

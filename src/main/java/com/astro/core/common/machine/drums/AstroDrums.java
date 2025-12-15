@@ -1,4 +1,4 @@
-package com.astro.core.common.data;
+package com.astro.core.common.machine.drums;
 
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.common.data.GTMaterials;

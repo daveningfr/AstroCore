@@ -3,6 +3,7 @@ package com.astro.core.integration.kubejs;
 import com.astro.core.AstroCore;
 import com.astro.core.client.AstroClient.AstroGUITextures;
 import com.astro.core.client.AstroClient.AstroMachines;
+import com.astro.core.client.AstroClient.AstroSoundEntries;
 import com.astro.core.common.data.AstroItems;
 import com.astro.core.common.data.AstroRecipeTypes;
 import com.astro.core.common.data.block.AstroBlocks;
@@ -43,6 +44,7 @@ public class AstroKubeJSPlugin extends KubeJSPlugin {
         event.add("AstroMachines", AstroMachines.class);
         event.add("AstroItems", AstroItems.class);
         event.add("AstroRecipeTypes", AstroRecipeTypes.class);
+        event.add("AstroSoundEntries", AstroSoundEntries.class);
 
         event.add("AstroCore", AstroCore.class);
     }

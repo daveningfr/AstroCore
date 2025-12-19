@@ -12,4 +12,6 @@ public class AstroGUITextures {
             "astrogreg:textures/gui/progress_bar/progress_bar_mana_infusion.png");
     public static final ResourceTexture PROGRESS_BAR_RUNE = new ResourceTexture(
             "astrogreg:textures/gui/progress_bar/progress_bar_rune.png");
+    public static final ResourceTexture PROGRESS_BAR_BEVERAGE = new ResourceTexture(
+            "astrogreg:textures/gui/progress_bar/progress_bar_beverage.png");
 }

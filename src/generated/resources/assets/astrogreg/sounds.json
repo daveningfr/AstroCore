@@ -1,0 +1,29 @@
+{
+  "beverage_processor": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "astrogreg:beverage_processor"
+      }
+    ],
+    "subtitle": "astrogreg.subtitle.beverage_processor"
+  },
+  "culinary_fabricator": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "astrogreg:culinary_fabricator"
+      }
+    ],
+    "subtitle": "astrogreg.subtitle.culinary_fabricator"
+  },
+  "rune_engraver": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "astrogreg:rune_engraver"
+      }
+    ],
+    "subtitle": "astrogreg.subtitle.rune_engraver"
+  }
+}

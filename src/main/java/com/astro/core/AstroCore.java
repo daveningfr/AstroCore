@@ -20,6 +20,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import com.astro.core.client.AstroClient.AstroSoundEntries;
 import com.astro.core.common.data.AstroItems;
 import com.astro.core.common.data.AstroRecipeTypes;
 import com.astro.core.common.data.block.AstroBlocks;
@@ -40,9 +41,8 @@ import org.apache.logging.log4j.Logger;
 
 import static com.astro.core.common.registry.AstroRegistry.REGISTRATE;
 
-@SuppressWarnings("removal")
+@SuppressWarnings({ "all" })
 @Mod(AstroCore.MOD_ID)
-
 public class AstroCore {
 
     public static final String MOD_ID = "astrogreg";
@@ -157,6 +157,6 @@ public class AstroCore {
      * @param event
      */
     public void registerSounds(GTCEuAPI.RegisterEvent<ResourceLocation, SoundEntry> event) {
-        // CustomSounds.init();
+        AstroSoundEntries.init();
     }
 }

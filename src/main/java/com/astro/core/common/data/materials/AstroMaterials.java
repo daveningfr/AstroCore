@@ -45,6 +45,7 @@ public class AstroMaterials {
     public static Material JOVITE;
     public static Material KRONALIUM;
     public static Material ENERGIZED_STEEL;
+    public static Material DIELECTRIC;
     public static Material SKY_STONE;
     public static Material FLUIX;
     public static Material FLUIX_PEARL;
@@ -112,7 +113,7 @@ public class AstroMaterials {
                 .langValue("Etrium")
                 .ingot()
                 .liquid()
-                .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_FINE_WIRE, MaterialFlags.GENERATE_BOLT_SCREW)
+                .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_FINE_WIRE)
                 .components(AstroMaterials.OSTRUM, 3, GTMaterials.Electrum, 2).formula("AgAuOt3")
                 .color(0x82dbbb).iconSet(MaterialIconSet.BRIGHT)
                 .buildAndRegister();
@@ -179,6 +180,15 @@ public class AstroMaterials {
                 .rotorStats(150, 130, 3, 12000)
                 .components(AstroMaterials.DESH, 1, GTMaterials.RedAlloy, 1, GTMaterials.Iron, 1)
                 .formula("DeFeCu(Si(FeS2)5(CrAl2O3)Hg3)4")
+                .buildAndRegister();
+
+        DIELECTRIC = new Material.Builder(
+                AstroCore.id("dielectric"))
+                .langValue("Dielectric")
+                .color(0x000000)
+                .flags(MaterialFlags.DISABLE_MATERIAL_RECIPES, MaterialFlags.DISABLE_DECOMPOSITION)
+                .dust()
+                .components(GTMaterials.Carbon, 3, GTMaterials.Blaze, 1, GTMaterials.Clay, 2)
                 .buildAndRegister();
 
         // Applied Energistics
@@ -350,7 +360,7 @@ public class AstroMaterials {
                 .langValue("Blazing Etrium")
                 .ingot()
                 .liquid()
-                .color(0x8ee8ed).iconSet(MaterialIconSet.METALLIC)
+                .color(0x8ee8ed).secondaryColor(0x00b0ba).iconSet(MaterialIconSet.METALLIC)
                 .blastTemp(1700, BlastProperty.GasTier.LOW, VA[GTValues.HV], 800)
                 .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_GEAR, MaterialFlags.GENERATE_LONG_ROD,
                         MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_SMALL_GEAR, MaterialFlags.GENERATE_ROD,
@@ -369,7 +379,7 @@ public class AstroMaterials {
                 .langValue("Niotic Calorite")
                 .ingot()
                 .liquid()
-                .color(0xe4eb60).iconSet(MaterialIconSet.SHINY)
+                .color(0xe4eb60).secondaryColor(0x9ea334).iconSet(MaterialIconSet.BRIGHT)
                 .blastTemp(1700, BlastProperty.GasTier.LOW, VA[GTValues.EV], 1000)
                 .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_GEAR, MaterialFlags.GENERATE_LONG_ROD,
                         MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_SMALL_GEAR, MaterialFlags.GENERATE_ROD,
@@ -421,6 +431,8 @@ public class AstroMaterials {
         // powah
         ingot.setIgnored(AstroMaterials.ENERGIZED_STEEL, Itms.ENERGIZED_STEEL);
         block.setIgnored(AstroMaterials.ENERGIZED_STEEL, Blcks.ENERGIZED_STEEL);
+
+        dust.setIgnored(AstroMaterials.DIELECTRIC, () -> Itms.DIELECTRIC_PASTE.get());
 
         // ae2
         dust.setIgnored(AstroMaterials.SKY_STONE, AEItems.SKY_DUST);

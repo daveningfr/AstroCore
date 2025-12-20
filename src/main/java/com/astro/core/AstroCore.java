@@ -33,11 +33,11 @@ import com.astro.core.common.machine.hatches.AstroParallelHatches;
 import com.astro.core.common.machine.multiblock.generator.AetherEngine;
 import com.astro.core.common.machine.multiblock.generator.ManaBoilers;
 import com.astro.core.datagen.AstroDatagen;
+import com.astro.core.datagen.lang.AstroLangHandler;
+import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.tterrag.registrate.providers.ProviderType;
-import com.astro.core.datagen.lang.AstroLangHandler;
 
 import static com.astro.core.common.registry.AstroRegistry.REGISTRATE;
 
@@ -65,7 +65,6 @@ public class AstroCore {
         AstroBlocks.init();
         AstroItems.init();
         AstroMaterialFlags.init();
-
     }
 
     public AstroCore() {

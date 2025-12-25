@@ -1,5 +1,7 @@
 {
   "values": [
+    "astrogreg:asteroid_stone",
+    "astrogreg:hard_asteroid_stone",
     "astrogreg:manasteel_brick_machine_casing",
     "astrogreg:manasteel_pipe_casing",
     "astrogreg:manasteel_firebox_casing",

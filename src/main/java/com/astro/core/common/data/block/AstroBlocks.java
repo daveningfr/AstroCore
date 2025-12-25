@@ -15,13 +15,13 @@ import net.minecraft.world.level.block.Blocks;
 import com.astro.core.AstroCore;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiFunction;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 
 import static com.astro.core.common.registry.AstroRegistry.REGISTRATE;
 
 @SuppressWarnings("all")
 public class AstroBlocks {
-
-    public static void init() {}
 
     static {
         REGISTRATE.creativeModeTab(() -> AstroCore.ASTRO_CREATIVE_TAB);
@@ -59,6 +59,35 @@ public class AstroBlocks {
         return block;
     }
 
+    private static BlockEntry<Block> createStoneBlock(String id, String name, String texture, MapColor mapColor,
+                                                      float hardness, float resistance) {
+        return REGISTRATE
+                .block(id, Block::new)
+                .initialProperties(() -> Blocks.STONE)
+                .properties(p -> p
+                        .mapColor(mapColor)
+                        .requiresCorrectToolForDrops()
+                        .strength(hardness, resistance)
+                        .sound(SoundType.STONE))
+                .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(),
+                        prov.models().cubeAll(ctx.getName(), AstroCore.id("block/" + texture))))
+                .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
+                .lang(name)
+                .item(BlockItem::new)
+                .build()
+                .register();
+    }
+
+    // Asteroid Stones
+    public static final BlockEntry<Block> ASTEROID_STONE = createStoneBlock(
+            "asteroid_stone", "Asteroid Stone", "rocks/asteroid_stone",
+            MapColor.TERRACOTTA_PURPLE, 2.0F, 2.0F);
+
+    public static final BlockEntry<Block> HARD_ASTEROID_STONE = createStoneBlock(
+            "hard_asteroid_stone", "Hard Asteroid Stone", "rocks/hard_asteroid_stone",
+            MapColor.TERRACOTTA_PURPLE, 3.0F, 3.0F);
+
+    // Generator Casings
     public static final BlockEntry<Block> MANASTEEL_MACHINE_CASING = createSidedCasingBlock(
             "§9Manasteel§r-Plated Brick Casing", "manasteel_brick_machine_casing",
             "generators/machine_casing_manasteel_plated_bricks", BlockItem::new);
@@ -103,4 +132,6 @@ public class AstroBlocks {
             AstroCore.id("block/generators/machine_casing_firebox_alfsteel"));
     public static final BlockEntry<ActiveBlock> FIREBOX_ALFSTEEL = createFireboxCasing(ALFSTEEL_FIREBOX,
             "§dAlfsteel§r Firebox Casing");
+
+    public static void init() {}
 }

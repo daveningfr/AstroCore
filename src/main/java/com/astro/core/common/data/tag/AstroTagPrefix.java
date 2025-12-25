@@ -1,5 +1,6 @@
 package com.astro.core.common.data.tag;
 
+import com.astro.core.common.data.block.AstroBlocks;
 import com.astro.core.common.data.materials.AstroMaterials;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
@@ -16,6 +17,32 @@ import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.oreTagPrefix;
 
 @SuppressWarnings("all")
 public class AstroTagPrefix {
+
+    public static final TagPrefix oreAsteroidStone = oreTagPrefix("asteroid_stone", BlockTags.MINEABLE_WITH_PICKAXE)
+            .langValue("Asteroid Stone %s Ore")
+            .registerOre(
+                    () -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation("astrogreg", "asteroid_stone")).defaultBlockState(),
+                    () -> AstroMaterials.ASTEROID_STONE,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)
+                            .strength(3.0F, 3.0F),
+                    new ResourceLocation("astrogreg", "block/rocks/asteroid_stone"),
+                    false, false, true);
+
+    public static final TagPrefix oreHardAsteroidStone = oreTagPrefix("hard_asteroid_stone", BlockTags.MINEABLE_WITH_PICKAXE)
+            .langValue("Hard Asteroid Stone %s Ore")
+            .registerOre(
+                    () -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation("astrogreg", "hard_asteroid_stone")).defaultBlockState(),
+                    () -> AstroMaterials.ASTEROID_STONE,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.TERRACOTTA_PURPLE)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)
+                            .strength(3.8F, 3.8F),
+                    new ResourceLocation("astrogreg", "block/rocks/hard_asteroid_stone"),
+                    false, false, true);
 
     public static final TagPrefix orePlutoStone = oreTagPrefix("pluto_stone", BlockTags.MINEABLE_WITH_PICKAXE)
             .langValue("Pluto Stone %s Ore")
@@ -133,6 +160,8 @@ public class AstroTagPrefix {
                     false, false, true);
 
     public static void init() {
+        oreAsteroidStone.addSecondaryMaterial(new MaterialStack(AstroMaterials.ASTEROID_STONE, dust.materialAmount()));
+        oreHardAsteroidStone.addSecondaryMaterial(new MaterialStack(AstroMaterials.ASTEROID_STONE, dust.materialAmount()));
         orePlutoStone.addSecondaryMaterial(new MaterialStack(AstroMaterials.PLUTO_STONE, dust.materialAmount()));
         oreNeptuneStone.addSecondaryMaterial(new MaterialStack(AstroMaterials.NEPTUNE_STONE, dust.materialAmount()));
         oreUranusStone.addSecondaryMaterial(new MaterialStack(AstroMaterials.URANUS_STONE, dust.materialAmount()));
